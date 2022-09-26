@@ -2,10 +2,10 @@
 
 addEventListener('DOMContentLoaded', () => {
 
-
 // unchangable global variables
     const tableSelector = document.querySelector('.main-table');
     const trRowFragment = document.createDocumentFragment();
+    const addTaskBtn = document.querySelector('#add-task');
 
 function addTask() {
 
@@ -66,7 +66,7 @@ function addTask() {
     tdButtonDelete.addEventListener('click', () => trSelector.remove());
     tdButtonAccent.addEventListener('click', () => trSelector.classList.toggle('accent'));
     
-    // nesting our tr wrapper and buttons inside of it
+    // nesting our td wrapper and buttons inside of it
     trRowFragment.appendChild(trSelector).appendChild(tdButtonsWrap).appendChild(tdButtonDelete);
     trRowFragment.appendChild(trSelector).appendChild(tdButtonsWrap).appendChild(tdButtonAccent);
 
@@ -74,20 +74,6 @@ function addTask() {
     tableSelector.appendChild(trRowFragment);
 }
 
-const addTaskBtn = document.querySelector('#add-task');
-
 addTaskBtn.addEventListener('click', addTask);
 
-
-
-
-
-
-
-
 });
-
-
-  
-
-
