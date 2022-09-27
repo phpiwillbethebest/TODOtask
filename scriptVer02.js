@@ -16,7 +16,7 @@ addEventListener('DOMContentLoaded', () => {
         // create empty tr element with a class name
         const trRowTemplate = document.createElement('tr');
         trRowTemplate.className = 'table-task-row';
-        // nest inside of tr element our td elements with values
+        // nest td elements with values in tr element
         trRowTemplate.innerHTML = `
         <td class="td-item-neon"></td>
         <td class="td-item">${nameValue}</td>
@@ -35,7 +35,7 @@ addEventListener('DOMContentLoaded', () => {
         const accentBtn = document.createElement("button");
         accentBtn.className = 'btn-style';
         accentBtn.textContent = 'Accent';
-        // add event listner or delete/accent buttons with functionality
+        // add event listner in delete/accent buttons with functionality
         deleteBtn.addEventListener('click', () => {
             trRowTemplate.remove();
         });
@@ -43,12 +43,12 @@ addEventListener('DOMContentLoaded', () => {
         accentBtn.addEventListener('click', () => {
             trRowTemplate.classList.toggle('accent');
         });
-        // nest delete/accent buttons inside td element
+        // nest delete/accent buttons in td element
         tdBtnsWrap.appendChild(deleteBtn);
         tdBtnsWrap.appendChild(accentBtn);
-        // nest all elements inside our document fragment
+        // nest all elements in document fragment
         trRowFragment.appendChild(trRowTemplate).appendChild(tdBtnsWrap);
-        // nest our fully ready document fragments inside HTML main table
+        // nest fully ready document fragments in HTML main table element
         tableSelector.appendChild(trRowFragment);
     }
     // add new task button
