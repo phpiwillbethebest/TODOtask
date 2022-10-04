@@ -7,7 +7,7 @@ addEventListener('DOMContentLoaded', () => {
     const opnTskBarBtn = document.querySelector('.opn-tsk-bar');
     const clsTskBarBtn = document.querySelector('.cls-tsk-bar');
     const crtNewTskBtn = document.querySelector('.crt-new-tsk');
-    const TskBarForm = document.querySelector('.tsk-bar-form');
+    const tskBarForm = document.querySelector('.tsk-bar-form');
     const trFragsCont = document.createDocumentFragment();
 
     // ID counters for td cells
@@ -235,14 +235,14 @@ addEventListener('DOMContentLoaded', () => {
 
     // open task bar form
     opnTskBarBtn.addEventListener('click', () => {
-        TskBarForm.classList.toggle('open');
+        tskBarForm.classList.toggle('open');
         opnTskBarBtn.classList.toggle('hide');
         clsTskBarBtn.classList.toggle('hide');
     });
 
     // close task bar form
     clsTskBarBtn.addEventListener('click', () => {
-        TskBarForm.classList.toggle('open');
+        tskBarForm.classList.toggle('open');
         opnTskBarBtn.classList.toggle('hide');
         clsTskBarBtn.classList.toggle('hide');
     });
