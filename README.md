@@ -1,6 +1,7 @@
-Simple TODO app
+Simple TODO app (Pure DOM manipulations)
 
-1. Made purely with JS + HTML + CSS
-2. Without saving functionality (implement in future)
-3. Without edit functionality (implement in future)
-4. Experimenting with different approaches (Ver01, Ver02 ...)
+1. Made with JS + HTML + CSS
+2. Functionality: Create/Delete/Edit/Accent
+3. Without saving functionality (after refreshing the page, all data will disappear)
+
+- TODO app with saving functionality - going to appear soon as a new project with different approach.

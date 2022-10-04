@@ -4,101 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>DOM TODO</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-    <div class="todo-form-wrap">
-        <h2>ADD NEW TASK</h2>
-        <div class="todo-form">
-            <div class="name-task-group">
-                <label for="task-name">Enter task name</label>
-                <input type="text" id="task-name" placeholder="task name">
-                <label for="choose-category">Choose category</label>
-                <select id="choose-category">
-                    <option value="task">Task</option>
-                    <option value="random thought">Random thought</option>
-                    <option value="idea">Idea</option>
-                    </optgroup>
-                </select>
-            </div>
-            <div class="textarea-wrap">
-                <label for="note-text">Write your notes</label>
-                <textarea id="note-text" cols="30" rows="3" placeholder="note"></textarea>
-            </div>
-            <div class="date-create-group">
-                <label for="date-id">Choose a date</label>
-                <input id="date-id" type="date">
-                <button class="add-task-btn" id="add-task">Add task</button>
-            </div>
+<div class="todo-list-app">
+
+    <div class="tsk-bar-form">
+        <div class="nam-cat-grp">
+            <input placeholder="Task Name" type="text" class="tsk-name">
+            <select class="tsk-cat">
+                <option value="Task">--Choose Category--</option>
+                <option>Task</option>
+                <option>Idea</option>
+                <option>Important</option>
+                <option>Random Thought</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <textarea placeholder="Task Note" class="tsk-note"></textarea>
+
+        <div class="dat-crt-grp">
+            <input type="date" class="tsk-date">
+            <button class="crt-new-tsk">Create</button>
         </div>
     </div>
 
-    <table class="main-table">
-        <tr class="table-header-row">
-            <th class="th-item-neon"></th>
-            <th class="th-item">Name</th>
-            <th class="th-item">Created</th>
-            <th class="th-item">Category</th>
-            <th class="th-item">Note</th>
-            <th class="th-item">Date</th>
-            <th class="th-item">Config</th>
-        </tr>
-        <!-- <tr class="table-task-row">
-            <td class="td-item-neon"></td>
-            <td class="td-item">grocery</td>
-            <td class="td-item">25.09.2022</td>
-            <td class="td-item">task</td>
-            <td class="td-item cell-width">buy eggs</td>
-            <td class="td-item">27.09.2022</td>
-            <td class="td-item">
-                <button class="edit-btn btn-style">Edit</button>
-                <button class="accent-btn btn-style">Accent</button>
-                <button class="delete-btn btn-style">Delete</button>
-            </td>
-        </tr>
-        <tr class="table-task-row accent">
-            <td class="td-item-neon"></td>
-            <td class="td-item">GYM</td>
-            <td class="td-item">25.09.2022</td>
-            <td class="td-item">task</td>
-            <td class="td-item cell-width">chest/back workout</td>
-            <td class="td-item">26.09.2022</td>
-            <td class="td-item">
-                <button class="edit-btn btn-style">Edit</button>
-                <button class="accent-btn btn-style">Accent</button>
-                <button class="delete-btn btn-style">Delete</button>
-            </td>
-        </tr>
-        <tr class="table-task-row">
-            <td class="td-item-neon"></td>
-            <td class="td-item">tip</td>
-            <td class="td-item">25.09.2022</td>
-            <td class="td-item">random thought</td>
-            <td class="td-item cell-width">try breath slow and deep all day long</td>
-            <td class="td-item">26.09.2022</td>
-            <td class="td-item">
-                <button class="edit-btn btn-style">Edit</button>
-                <button class="accent-btn btn-style">Accent</button>
-                <button class="delete-btn btn-style">Delete</button>
-            </td>
-        </tr>
-        <tr class="table-task-row">
-            <td class="td-item-neon"></td>
-            <td class="td-item">goal</td>
-            <td class="td-item">25.09.2022</td>
-            <td class="td-item">idea</td>
-            <td class="td-item cell-width">walk 20km</td>
-            <td class="td-item">27.09.2022</td>
-            <td class="td-item">
-                <button class="edit-btn btn-style">Edit</button>
-                <button class="accent-btn btn-style">Accent</button>
-                <button class="delete-btn btn-style">Delete</button>
-            </td>
-        </tr> -->
-    </table>
+    <button class="opn-tsk-bar btn-stl-big">create new task</button>
+    <button class="cls-tsk-bar btn-stl-big hide">close task bar</button>
 
-    <script src="scriptVer02.js"></script>
+    <table class="main-tab">
+        <tr class="tab-head">
+            <td class="tab-head-itm-neon"></td>
+            <td class="tab-head-itm">name</td>
+            <td class="tab-head-itm">created</td>
+            <td class="tab-head-itm">category</td>
+            <td class="tab-head-itm">note</td>
+            <td class="tab-head-itm">date</td>
+            <td class="tab-head-itm">config</td>
+        </tr>
+    </table>
+        
+
+</div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

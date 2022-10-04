@@ -1,0 +1,211 @@
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: PTSans-Regular;
+    src: url("../fonts/PTSans-Regular.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* table header */
+    --tab-head-bg: #18181C;
+    --tab-head-col: #F1F0F7;
+
+    /* table row */
+    --tab-row-bg: #26252C;
+    --tab-row-col: #ADACB4;
+    --tab-row-brd-col: #18181C;
+
+    /* table accent row */
+    --tab-row-acnt-bg: #2D2E37;
+    --tab-row-acnt-col: #F1F0F7;
+    
+    /* table row-item neon */
+    --tab-row-neon-bg: #2D2E37;
+    --tab-row-neon-hov-bg: #FF8000;
+
+    /* table row-item button */
+    --tab-row-btn-bg: #686868;
+    --tab-row-btn-hov-bg: #0EA0A0;
+
+    /* create new task button */
+    --btn-create-bg: #222222;
+    --btn-create-col: #9B9B9B;
+    --btn-create-hov-col: #FF8000;
+    --btn-crt-brd-col: #494949;
+
+    /* new task bar form */
+    --form-tsk-bar-bg: #18181C;
+    --inp-tsk-bar-bg: #F1F0F7;
+
+}
+
+.todo-list-app {
+    font-size: 0;
+    width: 1086px;
+    margin: 0 auto;
+}
+
+.btn-stl-big {
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 34px;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: var(--btn-create-bg);
+    color: var(--btn-create-col);
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    border: 2px solid var(--btn-crt-brd-col);
+    border-left: none;
+    border-right: none;
+}
+
+.hide {
+    display: none;
+}
+
+.btn-stl-big:hover {
+    background-color: black;
+    color: var(--btn-create-hov-col);
+    text-shadow: var(--btn-create-hov-col) 1px 0 10px;
+}
+
+/* tab header */
+
+.main-tab {
+    font-size: 18px;
+    font-family: PTSans-Regular;
+    border-collapse: collapse;
+    text-align: center;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.tab-head-itm-neon {
+    padding: 3px;
+    background-color: var(--tab-head-bg);
+}
+
+.tab-head-itm {
+    background-color: var(--tab-head-bg);
+    color: var(--tab-head-col);
+    width: 180px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+/* tab list rows */
+
+.tab-row {
+    font-size: 16px;
+    background-color: var(--tab-row-bg);
+    color: var(--tab-row-col);
+    border-bottom: 1px solid var(--tab-row-brd-col);
+}
+
+.accent {
+    background-color: var(--tab-row-acnt-bg);
+    color: var(--tab-row-acnt-col);
+}
+
+.tab-row:hover > .tab-row-itm-neon {
+    background-color: var(--tab-row-neon-hov-bg);
+}
+
+.tab-row-itm {
+    max-width: 180px;
+    padding: 10px 5px;
+    overflow-wrap: break-word;
+    line-break: auto;
+}
+
+.conf {
+    font-size: 0;
+}
+
+.tab-row-itm::first-letter {
+    text-transform: uppercase;
+}
+
+.tab-row-itm-neon {
+    background-color: var(--tab-row-neon-bg);
+    transition: 0.3s;
+}
+
+.btn-stl-small, .crt-new-tsk {
+    width: 50px;
+    padding: 5px 0;
+    border: none;
+    margin: 0 2px;
+    background-color: var(--tab-row-btn-bg);
+    transition: 0.3s;
+}
+
+.btn-stl-small:hover, .crt-new-tsk:hover {
+    background-color: var(--tab-row-btn-hov-bg);
+}
+
+/* task bar form */
+
+.tsk-bar-form {
+    background-color: var(--form-tsk-bar-bg);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    height: 78px;
+    margin-top: -78px;
+    transition: 0.3s;
+}
+
+.open {
+    margin-top: 0;
+}
+
+.nam-cat-grp, .dat-crt-grp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tsk-name, .tsk-cat, .tsk-date, .crt-new-tsk, .tsk-note, .edt-tsk-stl {
+    height: 24px;
+    width: 180px;
+    padding: 0 5px;
+    background-color: var(--inp-tsk-bar-bg);
+    border: none;
+    text-align: center;
+}
+
+.crt-new-tsk {
+    margin: 0;
+}
+
+.tsk-note {
+    resize: none;
+    height: 58px;
+    width: 360px;
+ }
+
+ .edt-tsk-stl {
+    width: 160px;
+ }
+
+ .txt-area {
+    resize: none;
+    height: 48px;
+ }
